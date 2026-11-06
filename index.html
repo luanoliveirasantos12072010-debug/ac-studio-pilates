@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AC Studio | Pilates, Fisioterapia e RPG em Garanhuns - PE</title>
+<meta name="description" content="AC Studio Pilates e RPG em Garanhuns - PE: Pilates, Fisioterapia e RPG com a fisioterapeuta Andréia. Av. Djalma Dutra, 628-A, Heliópolis. Nota 5,0 no Google. Agende pelo WhatsApp.">
+<meta property="og:title" content="AC Studio · Pilates, Fisioterapia e RPG">
+<meta property="og:description" content="Movimento consciente em Garanhuns. Nota 5,0 no Google.">
+<meta property="og:image" content="img/studio.jpg">
+<meta name="theme-color" content="#faf5f0">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HealthClub","name":"AC Studio Pilates e RPG","telephone":"+55 87 99182-0505","address":{"@type":"PostalAddress","streetAddress":"Av. Djalma Dutra, 628-A - Heliópolis","addressLocality":"Garanhuns","addressRegion":"PE","postalCode":"55296-290","addressCountry":"BR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"27"},"sameAs":["https://www.instagram.com/acstudio.pilates/"]}
+</script>
+<style>
+/* Terracota da marca, rosado, creme e madeira do studio. Sem preto. */
+:root{
+  --terra:#be6252; --terra2:#a5503f; --terral:#e7a596; --blush:#f6e1d8; --blush2:#f1d2c6;
+  --cream:#faf5f0; --paper:#fffcf9; --sand:#efe3d6; --wood:#c08a5c; --sage:#a3b097;
+  --ink:#4b3732; --mid:#86716a; --line:rgba(75,55,50,.13);
+  --serif:"Marcellus",Georgia,serif; --f:"Plus Jakarta Sans",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.8,.2,1); --spring:cubic-bezier(.34,1.5,.64,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+html,body{margin:0}
+body{background:var(--cream);color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.65}
+body.loading{overflow:hidden}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+img,video{display:block;max-width:100%}
+[hidden]{display:none!important}
+::selection{background:var(--blush2)}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(22px,env(safe-area-inset-left));padding-right:max(22px,env(safe-area-inset-right))}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;margin:0;letter-spacing:-.01em;text-wrap:balance;color:var(--ink)}
+h2{font-size:clamp(40px,5.4vw,74px)}
+h3{font-size:28px}
+p{margin:0}
+.tc{color:var(--terra)}
+.lbl{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--terra)}
+.lbl::before{content:"";width:26px;height:26px;border-radius:50%;border:1.5px solid currentColor;box-shadow:inset 0 0 0 5px var(--cream),inset 0 0 0 20px currentColor;flex:none;transform:scale(.6)}
+.pad{padding-block:clamp(90px,11vw,150px)}
+
+/* ===== Abertura 0–100: o anel de Pilates aperta e solta ===== */
+.loader{position:fixed;inset:0;z-index:500;display:grid;place-items:center;background:var(--terra);color:var(--paper);transition:clip-path 1.1s var(--ease)}
+.loader.go{clip-path:circle(0% at 50% 50%)}
+.ld{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+.rng{position:relative;width:min(220px,58vw);aspect-ratio:1;display:grid;place-items:center}
+.rng svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.rng .ring{transform-origin:110px 110px;animation:squeeze 1.3s ease-in-out infinite}
+@keyframes squeeze{50%{transform:scale(1.08,.84)}}
+.rng .pr{stroke-dasharray:629;stroke-dashoffset:629}
+.rng img{width:38%;height:auto;opacity:.15;transition:opacity .2s}
+.ld .n{font-family:var(--serif);font-size:60px;line-height:1;font-variant-numeric:tabular-nums}
+.ld .n small{font-size:.45em;opacity:.7}
+.ld .nm{font-family:var(--serif);font-size:24px;letter-spacing:.32em;padding-left:.32em}
+.ld .sb{font-size:11.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;opacity:.8;margin-top:-14px;padding-left:.28em}
+
+/* ===== Topo ===== */
+.nav{position:fixed;inset:0 0 auto;z-index:60;padding-block:16px;transition:padding .4s,background .4s,box-shadow .4s}
+.nav.solid{padding-block:9px;background:rgba(250,245,240,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mk{width:48px;height:48px;border-radius:50%;background:var(--terra);display:grid;place-items:center;flex:none}
+.brand .mk img{width:24px}
+.brand b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:.2em;line-height:1}
+.brand small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-top:4px}
+.links{display:flex;gap:28px;font-size:15px;font-weight:500}
+.links a{text-decoration:none;position:relative;padding-block:4px}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--terra);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+.links a:hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:1020px){.links{display:none}}
+.btn{--x:0px;--y:0px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 28px;border-radius:999px;border:0;cursor:pointer;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;transform:translate(var(--x),var(--y));transition:transform .4s var(--ease),background .3s,color .3s,box-shadow .3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.t{background:var(--terra);color:var(--paper);box-shadow:0 16px 34px -16px rgba(165,80,63,.9)}
+.btn.t:hover{background:var(--terra2)}
+.btn.o{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.o:hover{background:var(--ink);color:var(--cream)}
+.btn.c{background:var(--paper);color:var(--terra2)}
+.btn.c:hover{background:var(--blush)}
+.btn .ar{transition:transform .4s var(--ease)}
+.btn:hover .ar{transform:translateX(5px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
+.nav .btn{padding:12px 20px;font-size:14px}
+@media(max-width:560px){.nav .btn span{display:none}.nav .btn{padding:12px}.brand small{display:none}}
+
+/* ===== Hero ===== */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding-block:130px 80px}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;opacity:.75}
+.blob.a{width:520px;height:520px;background:var(--blush2);left:-160px;top:-120px;animation:fl1 16s ease-in-out infinite}
+.blob.b{width:420px;height:420px;background:#f3e2cf;right:-120px;bottom:-100px;animation:fl1 20s ease-in-out infinite reverse}
+@keyframes fl1{50%{transform:translate(60px,40px) scale(1.1)}}
+.hgrid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,80px);align-items:center}
+.htx{display:flex;flex-direction:column;gap:24px}
+.hero h1{font-size:clamp(46px,6vw,90px);line-height:.98}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.06em}
+.hero h1 .w>span{display:inline-block;transform:translateY(110%) rotate(6deg);transform-origin:left bottom}
+.ready .hero h1 .w>span{animation:rise 1.1s var(--ease) forwards;animation-delay:calc(var(--i)*.07s + .1s)}
+@keyframes rise{to{transform:none}}
+.hero .lead{max-width:48ch;color:var(--mid);font-size:clamp(17px,1.35vw,19px)}
+.fx{opacity:0;transform:translateY(22px)}
+.ready .fx{animation:fin 1s var(--ease) forwards;animation-delay:var(--d,.6s)}
+@keyframes fin{to{opacity:1;transform:none}}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.gr{display:flex;align-items:center;gap:14px;padding:10px 18px 10px 10px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);width:max-content;max-width:100%;text-decoration:none}
+.gr .g{width:40px;height:40px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font-family:var(--serif);font-size:18px;color:var(--terra2);flex:none}
+.gr .st{color:#e3a33c;letter-spacing:2px;font-size:15px}
+.gr small{display:block;color:var(--mid);font-size:13px;line-height:1.2}
+.hv{position:relative;justify-self:center;width:min(420px,100%)}
+.hv .fr{position:relative;aspect-ratio:540/762;border-radius:220px 220px 30px 30px;overflow:hidden;background:var(--sand);box-shadow:0 50px 90px -40px rgba(75,55,50,.55);clip-path:inset(0 0 100% 0 round 220px 220px 30px 30px)}
+.ready .hv .fr{animation:arch 1.4s var(--ease) .25s forwards}
+@keyframes arch{to{clip-path:inset(0 0 0 0 round 220px 220px 30px 30px)}}
+.hv video{width:100%;height:100%;object-fit:cover}
+.hv .ol{position:absolute;inset:-14px;border-radius:234px 234px 40px 40px;border:1.5px solid var(--terral);pointer-events:none;animation:sp 10s ease-in-out infinite}
+@keyframes sp{50%{transform:rotate(2deg) scale(1.01)}}
+.hv .sticker{position:absolute;left:-46px;bottom:12%;width:120px;height:120px;border-radius:50%;background:var(--terra);display:grid;place-items:center;box-shadow:0 20px 40px -18px rgba(165,80,63,.8)}
+.hv .sticker svg{position:absolute;inset:0;width:100%;height:100%;animation:rot 18s linear infinite}
+.hv .sticker img{width:34px}
+@keyframes rot{to{transform:rotate(360deg)}}
+.hv .tg{position:absolute;right:-20px;top:16%;padding:10px 16px;border-radius:16px;background:rgba(255,252,249,.94);backdrop-filter:blur(6px);box-shadow:0 20px 40px -20px rgba(75,55,50,.5);font-size:14px;line-height:1.3;animation:bob 6s ease-in-out infinite}
+.hv .tg b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:var(--terra)}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr}.hv{order:-1;width:min(290px,74vw)}.hv .sticker{left:-20px;width:96px;height:96px}.hv .tg{right:-10px}.hero{padding-top:110px}}
+
+/* ===== Princípios: rolagem horizontal ===== */
+.pr-wrap{position:relative;height:420vh;background:var(--terra);color:var(--paper)}
+.pr-st{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:40px}
+.pr-st .hd{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.pr-st h2{color:var(--paper)}
+.pr-st .lbl{color:var(--blush)}
+.pr-st .lbl::before{box-shadow:inset 0 0 0 5px var(--terra),inset 0 0 0 20px currentColor}
+.pr-st .bar{width:min(260px,40vw);height:3px;border-radius:3px;background:rgba(255,255,255,.2);overflow:hidden}
+.pr-st .bar i{display:block;height:100%;width:0;background:var(--paper)}
+.track{display:flex;gap:22px;padding-left:max(22px,calc((100vw - 1240px)/2 + 22px));will-change:transform}
+.pc{flex:none;width:min(420px,78vw);aspect-ratio:4/5;border-radius:30px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);position:relative;overflow:hidden}
+.pc .no{font-family:var(--serif);font-size:20px;opacity:.75}
+.pc h3{color:var(--paper);font-size:clamp(46px,5vw,68px)}
+.pc p{opacity:.85;max-width:30ch}
+.pc svg{position:absolute;right:-30px;top:-30px;width:220px;height:220px;opacity:.16}
+.pc.img{padding:0;background:var(--sand)}
+.pc.img img,.pc.img video{width:100%;height:100%;object-fit:cover}
+.pc.img span{position:absolute;left:20px;bottom:20px;padding:8px 14px;border-radius:999px;background:rgba(255,252,249,.92);color:var(--terra2);font-size:13.5px;font-weight:600}
+@media(prefers-reduced-motion:reduce){.pr-wrap{height:auto}.pr-st{position:static;height:auto;padding-block:90px}.track{overflow-x:auto;padding-bottom:10px}}
+
+/* ===== Modalidades ===== */
+.sh{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.sh .l{display:flex;flex-direction:column;gap:18px;max-width:760px}
+.sh p{color:var(--mid);max-width:42ch}
+.tabs{display:flex;gap:6px;padding:6px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);width:max-content;max-width:100%;margin-bottom:28px;position:relative}
+.tabs button{position:relative;z-index:1;border:0;cursor:pointer;padding:12px 24px;border-radius:999px;background:transparent;font-weight:600;font-size:15px;color:var(--mid);transition:color .4s}
+.tabs button.on{color:var(--paper)}
+.tabs .pill{position:absolute;top:6px;bottom:6px;left:0;border-radius:999px;background:var(--terra);transition:transform .55s var(--spring),width .55s var(--spring)}
+.mod{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,60px);align-items:center;border-radius:36px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);padding:clamp(18px,2.4vw,30px)}
+.mod .im{border-radius:26px;overflow:hidden;aspect-ratio:5/4;background:var(--sand)}
+.mod .im img{width:100%;height:100%;object-fit:cover;animation:zin .9s var(--ease)}
+@keyframes zin{from{transform:scale(1.12);opacity:.3}}
+.mod .bd{display:flex;flex-direction:column;gap:16px;padding:clamp(6px,2vw,24px);animation:fin .6s var(--ease)}
+.mod .bd h3{font-size:clamp(38px,4vw,54px)}
+.mod .bd p{color:var(--mid)}
+.mod ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mod li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.4}
+.mod li::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;margin-top:1px;background:var(--blush);box-shadow:inset 0 0 0 5px var(--terra)}
+@media(max-width:900px){.mod{grid-template-columns:1fr}.tabs{width:100%}.tabs button{flex:1;padding:12px 10px}}
+@media(max-width:460px){.mod ul{grid-template-columns:1fr}}
+
+/* ===== Vídeos ===== */
+.vids{display:grid;grid-template-columns:1fr auto auto;gap:clamp(18px,3vw,40px);align-items:center}
+.vids .tx{display:flex;flex-direction:column;gap:18px}
+.vids .tx p{color:var(--mid)}
+.phone{position:relative;width:min(270px,40vw);aspect-ratio:540/762;border-radius:34px;overflow:hidden;background:var(--sand);box-shadow:0 0 0 8px var(--paper),0 0 0 9px var(--line),0 50px 90px -40px rgba(75,55,50,.6);transform:rotate(var(--r,0deg));transition:transform .7s var(--spring)}
+.phone:hover{transform:rotate(0) scale(1.03)}
+.phone video{width:100%;height:100%;object-fit:cover}
+.phone .cap{position:absolute;left:14px;bottom:14px;padding:7px 12px;border-radius:999px;background:rgba(255,252,249,.92);color:var(--terra2);font-size:13px;font-weight:600}
+.phone .snd{position:absolute;right:12px;top:12px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,252,249,.85);cursor:pointer;display:grid;place-items:center;color:var(--terra2)}
+@media(max-width:900px){.vids{grid-template-columns:1fr 1fr}.vids .tx{grid-column:1/-1}.phone{width:100%}}
+
+/* ===== Galeria ===== */
+.gal{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:280px 280px;gap:14px}
+.gi{position:relative;border-radius:26px;overflow:hidden;cursor:zoom-in;border:0;padding:0;background:var(--sand)}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.gi:hover img{transform:scale(1.07)}
+.gi span{position:absolute;left:14px;bottom:14px;padding:7px 13px;border-radius:999px;background:rgba(255,252,249,.92);color:var(--terra2);font-size:13px;font-weight:600;transform:translateY(8px);opacity:0;transition:.4s var(--ease)}
+.gi:hover span,.gi:focus-visible span{transform:none;opacity:1}
+.gi.a{grid-row:span 2}
+.gi.d{grid-column:span 2}
+@media(max-width:800px){.gal{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gi{aspect-ratio:1}.gi.a{grid-row:auto;grid-column:span 2;aspect-ratio:4/3}.gi.d{grid-column:span 2;aspect-ratio:16/9}}
+.lb{position:fixed;inset:0;z-index:300;background:rgba(75,55,50,.86);backdrop-filter:blur(8px);display:grid;place-items:center;padding:24px;animation:fin .35s var(--ease)}
+.lb img{max-height:86vh;max-width:min(1000px,100%);border-radius:20px;object-fit:contain}
+.lb button{position:absolute;top:18px;right:18px;width:46px;height:46px;border-radius:50%;border:0;background:var(--paper);cursor:pointer;font-size:22px;color:var(--terra2)}
+
+/* ===== Andréia ===== */
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center}
+.abim{position:relative;min-height:520px}
+.abim .p1{position:absolute;left:0;top:0;width:72%;aspect-ratio:1076/966;border-radius:30px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(75,55,50,.55)}
+.abim .p2{position:absolute;right:0;bottom:0;width:44%;aspect-ratio:978/1610;border-radius:200px 200px 26px 26px;overflow:hidden;box-shadow:0 0 0 8px var(--cream),0 40px 80px -40px rgba(75,55,50,.55)}
+.abim img{width:100%;height:100%;object-fit:cover;transform:translateY(var(--py,0px)) scale(1.1)}
+.ab .tx{display:flex;flex-direction:column;gap:18px}
+.ab .tx p{color:var(--mid)}
+.ab blockquote{margin:0;font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);line-height:1.25;color:var(--terra2);padding-left:22px;border-left:2px solid var(--terral)}
+@media(max-width:900px){.ab{grid-template-columns:1fr}.abim{min-height:auto;aspect-ratio:1}}
+
+/* ===== Nota Google ===== */
+.rate{border-radius:40px;background:linear-gradient(135deg,var(--blush),#f8ebe2);padding:clamp(34px,5vw,70px);display:grid;grid-template-columns:auto 1fr auto;gap:clamp(24px,4vw,60px);align-items:center;position:relative;overflow:hidden}
+.rate .big{font-family:var(--serif);font-size:clamp(90px,12vw,170px);line-height:.85;color:var(--terra)}
+.stars{display:flex;gap:6px;margin-top:10px}
+.stars svg{width:30px;height:30px;fill:#e3a33c;transform:scale(0) rotate(-40deg)}
+.rate.on .stars svg{animation:star .6s var(--spring) forwards;animation-delay:calc(var(--i)*.12s + .3s)}
+@keyframes star{to{transform:none}}
+.rate h3{font-size:clamp(28px,3vw,40px);margin-bottom:8px}
+.rate p{color:var(--mid)}
+@media(max-width:900px){.rate{grid-template-columns:1fr;text-align:left}}
+
+/* ===== Agendar ===== */
+.agd{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.agd .tx{display:flex;flex-direction:column;gap:18px}
+.agd .tx p{color:var(--mid)}
+.form{border-radius:30px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line),0 40px 80px -50px rgba(75,55,50,.5);padding:clamp(24px,3vw,38px);display:grid;gap:16px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f label,.f .lb2{font-size:13.5px;font-weight:600;color:var(--mid)}
+.f input,.f select{border:0;border-radius:14px;padding:14px 16px;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);width:100%}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button{border:0;cursor:pointer;padding:10px 16px;border-radius:999px;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font-size:14.5px;font-weight:500;transition:background .3s,color .3s,transform .4s var(--spring)}
+.opts button.on{background:var(--terra);color:var(--paper);box-shadow:none;transform:scale(1.04)}
+@media(max-width:900px){.agd{grid-template-columns:1fr}}
+
+/* ===== FAQ ===== */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,90px);align-items:start}
+.qa{border-top:1px solid var(--line)}
+.qa:last-child{border-bottom:1px solid var(--line)}
+.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:var(--serif);font-size:clamp(22px,2.2vw,28px);line-height:1.2}
+.qa .pl{flex:none;width:36px;height:36px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--terral);display:grid;place-items:center;font-family:var(--f);font-size:18px;color:var(--terra);transition:transform .5s var(--ease),background .3s,color .3s}
+.qa.on .pl{transform:rotate(45deg);background:var(--terra);color:var(--paper);box-shadow:none}
+.qa .an{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.qa.on .an{grid-template-rows:1fr}
+.qa .an>div{overflow:hidden}
+.qa .an p{padding-bottom:22px;color:var(--mid);max-width:60ch}
+@media(max-width:900px){.faq{grid-template-columns:1fr}}
+
+/* ===== Local ===== */
+.loc{display:grid;grid-template-columns:.85fr 1.15fr;border-radius:34px;overflow:hidden;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line),0 50px 90px -60px rgba(75,55,50,.6)}
+.loc .info{padding:clamp(28px,4vw,50px);display:flex;flex-direction:column;gap:18px;min-width:0}
+.li{display:flex;gap:14px;align-items:flex-start;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.li .ic{flex:none;width:46px;height:46px;border-radius:50%;background:var(--blush);color:var(--terra2);display:grid;place-items:center}
+.li small{display:block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--terra)}
+.li div{min-width:0;overflow-wrap:anywhere}
+.li a{text-decoration:none}
+.map{position:relative;min-height:520px;background:var(--sand)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:900px){.loc{grid-template-columns:1fr}.map{min-height:360px}}
+
+/* ===== Final ===== */
+.final{position:relative;overflow:hidden;background:var(--terra);color:var(--paper);text-align:center;padding-block:clamp(110px,14vw,180px)}
+.final .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:24px}
+.final h2{color:var(--paper);font-size:clamp(46px,7vw,100px);max-width:13ch}
+.final p{opacity:.88;max-width:44ch}
+.final .bgl{position:absolute;left:50%;top:50%;width:min(640px,120vw);transform:translate(-50%,-50%) rotate(var(--rr,0deg));opacity:.08;pointer-events:none}
+footer{background:var(--terra2);color:rgba(255,252,249,.78);padding-block:30px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--paper)}
+
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .rv.on{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}
+
+/* ===== Assistente (esquerda) ===== */
+.abt{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));z-index:90;display:flex;align-items:center;gap:12px;border:0;cursor:pointer;padding:7px 20px 7px 7px;border-radius:999px;background:var(--paper);box-shadow:0 0 0 1px var(--line),0 22px 44px -18px rgba(75,55,50,.55);text-align:left;line-height:1.2;transition:transform .4s var(--spring)}
+.abt:hover{transform:translateY(-3px)}
+.abt .av{position:relative;width:46px;height:46px;border-radius:50%;background:var(--terra);display:grid;place-items:center;flex:none}
+.abt .av img{width:22px}
+.abt .av::after{content:"";position:absolute;right:0;bottom:0;width:11px;height:11px;border-radius:50%;background:#78c99a;border:2px solid var(--paper)}
+.abt b{display:block;font-weight:600;font-size:14.5px}
+.abt small{font-size:12px;color:var(--mid)}
+.as{position:fixed;left:max(14px,env(safe-area-inset-left));bottom:calc(max(18px,env(safe-area-inset-bottom)) + 74px);z-index:91;width:min(400px,calc(100vw - 28px));max-height:min(640px,calc(100svh - 120px));display:flex;flex-direction:column;border-radius:26px;background:var(--paper);overflow:hidden;box-shadow:0 0 0 1px var(--line),0 50px 90px -30px rgba(75,55,50,.6);transform-origin:bottom left;animation:apop .5s var(--spring)}
+@keyframes apop{from{opacity:0;transform:scale(.86) translateY(16px)}}
+.as header{display:flex;align-items:center;gap:12px;padding:16px;background:var(--terra);color:var(--paper)}
+.as header .av{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center}
+.as header .av img{width:20px}
+.as header b{display:block;font-family:var(--serif);font-weight:400;font-size:20px;line-height:1.1}
+.as header small{display:flex;align-items:center;gap:6px;font-size:12.5px;opacity:.9}
+.as header small::before{content:"";width:7px;height:7px;border-radius:50%;background:#9fe0b8}
+.as header button{margin-left:auto;width:34px;height:34px;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.18);color:var(--paper);font-size:18px}
+.msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--cream);font-size:15px;line-height:1.55}
+.m{max-width:88%;padding:11px 15px;border-radius:20px;opacity:0;transform:translateY(8px);animation:fin .4s var(--ease) forwards}
+.m.b{background:var(--paper);border-bottom-left-radius:6px;box-shadow:0 0 0 1px var(--line)}
+.m.u{background:var(--terra);color:var(--paper);align-self:flex-end;border-bottom-right-radius:6px}
+.m a{color:var(--terra2);font-weight:600}
+.m b{font-weight:600;color:var(--terra2)}
+.typing{display:flex;gap:5px;padding:15px 16px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--terra);animation:dt 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dt{50%{transform:translateY(-5px);opacity:.4}}
+.qk{display:flex;gap:7px;padding:10px 12px;overflow-x:auto;border-top:1px solid var(--line);scrollbar-width:none;background:var(--paper)}
+.qk::-webkit-scrollbar{display:none}
+.qk button{flex:none;border:0;cursor:pointer;padding:8px 13px;border-radius:999px;background:var(--blush);font-size:13.5px;font-weight:500;transition:background .25s}
+.qk button:hover{background:var(--blush2)}
+.as form{display:flex;gap:8px;padding:12px;background:var(--paper)}
+.as input{flex:1;min-width:0;border:0;border-radius:999px;padding:12px 16px;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font-size:15px}
+.as form button{width:46px;height:46px;border-radius:50%;border:0;background:var(--terra);color:var(--paper);cursor:pointer;display:grid;place-items:center;flex:none}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js .rv,.fx{opacity:1;transform:none}.hero h1 .w>span{transform:none}.hv .fr{clip-path:none}.stars svg{transform:none}}
+</style>
+</head>
+<body class="loading">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.5 14.9 8.6l6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8Z"/></symbol>
+</defs></svg>
+
+<!-- ABERTURA 0-100 -->
+<div class="loader" id="loader" aria-hidden="true"><div class="ld">
+  <div class="rng"><svg viewBox="0 0 220 220"><g class="ring"><circle cx="110" cy="110" r="100" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="6"/><circle class="pr" id="ldR" cx="110" cy="110" r="100" fill="none" stroke="#fffcf9" stroke-width="6" stroke-linecap="round" transform="rotate(-90 110 110)"/><rect x="2" y="96" width="14" height="28" rx="7" fill="#fffcf9"/><rect x="204" y="96" width="14" height="28" rx="7" fill="#fffcf9"/></g></svg><img id="ldL" src="img/logo-w.png" alt=""></div>
+  <div class="n"><span id="ldN">0</span><small>%</small></div>
+  <div class="nm">STUDIO</div><div class="sb">Pilates, Fisioterapia e RPG</div>
+</div></div>
+
+<nav class="nav" id="nav"><div class="wrap">
+  <a class="brand" href="#inicio" aria-label="AC Studio, início"><span class="mk"><img src="img/logo-w.png" alt=""></span><span><b>STUDIO</b><small>Pilates, Fisioterapia e RPG</small></span></a>
+  <div class="links"><a href="#principios">Método</a><a href="#modalidades">Modalidades</a><a href="#pratica">Na prática</a><a href="#studio">O studio</a><a href="#andreia">Andréia</a><a href="#contato">Contato</a></div>
+  <a class="btn t wa" href="#" data-msg="Olá, AC Studio! Vim pelo site e gostaria de agendar uma avaliação."><svg><use href="#i-wa"/></svg><span>Agendar</span></a>
+</div></nav>
+
+<header class="hero" id="inicio">
+  <span class="blob a"></span><span class="blob b"></span>
+  <div class="wrap hgrid">
+    <div class="htx">
+      <span class="lbl fx" style="--d:.05s">Pilates · Fisioterapia · RPG · Garanhuns</span>
+      <h1 id="h1">Movimento consciente para um corpo <span class="tc">mais livre.</span></h1>
+      <p class="lead fx" style="--d:.7s">No AC Studio, cada aula é acompanhada de perto por fisioterapeutas. Pilates, Fisioterapia e RPG para cuidar da sua postura, aliviar dores e devolver força e equilíbrio ao seu dia a dia.</p>
+      <div class="cta fx" style="--d:.85s"><a class="btn t wa" href="#" data-msg="Olá, AC Studio! Vim pelo site e gostaria de agendar uma avaliação."><svg><use href="#i-wa"/></svg>Agendar avaliação <span class="ar">→</span></a><a class="btn o" href="#modalidades">Conhecer modalidades</a></div>
+      <a class="gr fx" style="--d:1s" href="https://www.google.com/maps/search/?api=1&query=AC+Studio+Pilates+e+RPG+Garanhuns" target="_blank" rel="noopener"><span class="g">G</span><span><span class="st">★★★★★</span><small><b>5,0</b> no Google · 27 avaliações</small></span></a>
+    </div>
+    <div class="hv fx" style="--d:.2s">
+      <span class="ol"></span>
+      <div class="fr"><video id="hvid" src="img/video-chair.mp4" poster="img/poster-chair.jpg" autoplay muted loop playsinline preload="auto" aria-label="Aluna fazendo exercício na chair do Pilates"></video></div>
+      <div class="tg"><b>Aulas acompanhadas</b>atenção a cada movimento</div>
+      <div class="sticker"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cp" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><text font-family="Plus Jakarta Sans" font-size="10" font-weight="600" letter-spacing="3.2" fill="#fffcf9"><textPath href="#cp">PILATES · FISIOTERAPIA · RPG · </textPath></text></svg><img src="img/logo-w.png" alt=""></div>
+    </div>
+  </div>
+</header>
+
+<section class="pr-wrap" id="principios">
+  <div class="pr-st">
+    <div class="wrap hd"><div style="display:flex;flex-direction:column;gap:16px"><span class="lbl">O método</span><h2>Os pilares do nosso <span style="font-style:italic">movimento.</span></h2></div><div class="bar"><i id="pbar"></i></div></div>
+    <div class="track" id="track">
+      <article class="pc"><svg viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="3"><circle cx="50" cy="50" r="40"/><circle cx="50" cy="50" r="20"/></svg><span class="no">01</span><div><h3>Controle</h3><p>Cada movimento é feito com intenção, protegendo as articulações e ativando os músculos certos.</p></div></article>
+      <article class="pc"><svg viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="3"><circle cx="50" cy="50" r="10"/><circle cx="50" cy="50" r="25"/><circle cx="50" cy="50" r="40"/></svg><span class="no">02</span><div><h3>Concentração</h3><p>Mente presente no corpo. Você aprende a perceber a sua postura e a sua respiração.</p></div></article>
+      <article class="pc img"><img src="img/cadillac.jpg" alt="Aluna alongando no cadillac do AC Studio" loading="lazy"><span>Alongamento no Cadillac</span></article>
+      <article class="pc"><svg viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="3"><path d="M10 70h80M50 70V20M30 40h40"/></svg><span class="no">03</span><div><h3>Equilíbrio</h3><p>Estabilidade para o corpo inteiro, prevenindo quedas e lesões no dia a dia.</p></div></article>
+      <article class="pc"><svg viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="3"><path d="M20 60c10-30 50-30 60 0M30 60v20M70 60v20"/></svg><span class="no">04</span><div><h3>Força</h3><p>Fortalecimento profundo, do centro do corpo para fora, sem impacto.</p></div></article>
+      <article class="pc img"><video src="img/video-cadillac.mp4" poster="img/poster-cadillac.jpg" muted loop playsinline preload="none" class="iv" aria-label="Exercício invertido no cadillac"></video><span>Força e controle</span></article>
+      <article class="pc"><svg viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="3"><path d="M15 70C35 20 65 20 85 70"/><path d="M30 30l-10-10M70 30l10-10M50 22V8"/></svg><span class="no">05</span><div><h3>Liberdade</h3><p>Menos dor, mais mobilidade. O objetivo é você se mover com leveza e confiança.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="modalidades"><div class="wrap">
+  <div class="sh"><div class="l"><span class="lbl rv">Modalidades</span><h2 class="rv d1">Três caminhos para <span class="tc">cuidar de você.</span></h2></div><p class="rv d2">Pilates, Fisioterapia e RPG que se complementam, sempre com avaliação e acompanhamento de fisioterapeutas.</p></div>
+  <div class="tabs rv" id="tabs" role="tablist"><span class="pill" id="pill"></span><button class="on" role="tab">Pilates</button><button role="tab">Fisioterapia</button><button role="tab">RPG</button></div>
+  <div class="mod rv d1" id="mod" aria-live="polite"></div>
+</div></section>
+
+<section class="pad" id="pratica" style="padding-top:0"><div class="wrap vids">
+  <div class="tx">
+    <span class="lbl rv">Na prática</span>
+    <h2 class="rv d1">Veja como é uma aula <span class="tc">no studio.</span></h2>
+    <p class="rv d2">Aparelhos completos, ambiente acolhedor e exercícios adaptados ao seu momento, do iniciante ao avançado.</p>
+    <a class="btn t wa rv d3" style="align-self:flex-start" href="#" data-msg="Olá, AC Studio! Vi os vídeos no site e quero fazer Pilates. Como funciona?"><svg><use href="#i-wa"/></svg>Quero fazer aula <span class="ar">→</span></a>
+  </div>
+  <div class="phone rv d1" style="--r:-4deg"><video class="iv" src="img/video-cadillac.mp4" poster="img/poster-cadillac.jpg" muted loop playsinline preload="none" aria-label="Vídeo de aluna no cadillac"></video><span class="cap">Cadillac</span></div>
+  <div class="phone rv d2" style="--r:3deg;margin-top:60px"><video class="iv" src="img/video-chair.mp4" poster="img/poster-chair.jpg" muted loop playsinline preload="none" aria-label="Vídeo de aluna na chair"></video><span class="cap">Chair</span></div>
+</div></section>
+
+<section class="pad" id="studio" style="padding-top:0"><div class="wrap">
+  <div class="sh"><div class="l"><span class="lbl rv">O studio</span><h2 class="rv d1">Um espaço feito para <span class="tc">você se sentir bem.</span></h2></div><p class="rv d2">Na Av. Djalma Dutra, em Heliópolis: aparelhos completos, madeira, luz natural e um clima de casa.</p></div>
+  <div class="gal rv" id="gal">
+    <button class="gi a" data-src="img/studio.jpg"><img src="img/studio.jpg" alt="Sala de Pilates do AC Studio com aparelhos e piso de madeira" loading="lazy"><span>Nossa sala</span></button>
+    <button class="gi" data-src="img/cadillac.jpg"><img src="img/cadillac.jpg" alt="Aluna no cadillac" loading="lazy" style="object-position:60% 50%"><span>Cadillac</span></button>
+    <button class="gi" data-src="img/equipe.jpg"><img src="img/equipe.jpg" alt="Equipe do AC Studio em evento ao ar livre" loading="lazy" style="object-position:50% 40%"><span>Nossa equipe</span></button>
+    <button class="gi d" data-src="img/poster-chair.jpg"><img src="img/poster-chair.jpg" alt="Aluna na chair" loading="lazy" style="object-position:50% 40%"><span>Chair</span></button>
+  </div>
+</div></section>
+
+<section class="pad" id="andreia" style="padding-top:0"><div class="wrap ab">
+  <div class="abim rv"><div class="p1"><img id="ai1" src="img/andreia.jpg" alt="Andréia, fisioterapeuta do AC Studio, sorrindo" loading="lazy"></div><div class="p2"><img id="ai2" src="img/andreia-retrato.jpg" alt="Andréia em retrato de corpo inteiro" loading="lazy" style="object-position:50% 20%"></div></div>
+  <div class="tx">
+    <span class="lbl rv">Quem cuida de você</span>
+    <h2 class="rv d1">Prazer, <span class="tc">Andréia.</span></h2>
+    <blockquote class="rv d2">“Pilates é para todos os corpos. O segredo é respeitar o seu ritmo e evoluir com segurança.”</blockquote>
+    <p class="rv d2">Sou fisioterapeuta e à frente do AC Studio, junto com a nossa equipe, acompanho cada aluno de perto. Aqui o Pilates, a Fisioterapia e o RPG caminham juntos para tratar dores, corrigir a postura e devolver qualidade de vida.</p>
+    <a class="btn o wa rv d3" style="align-self:flex-start" href="#" data-msg="Olá, Andréia! Vim pelo site e gostaria de conversar sobre as aulas.">Falar com a Andréia <span class="ar">→</span></a>
+  </div>
+</div></section>
+
+<section style="padding-bottom:clamp(90px,11vw,150px)"><div class="wrap">
+  <div class="rate rv" id="rate">
+    <div><div class="big">5,0</div><div class="stars"><svg style="--i:0"><use href="#star"/></svg><svg style="--i:1"><use href="#star"/></svg><svg style="--i:2"><use href="#star"/></svg><svg style="--i:3"><use href="#star"/></svg><svg style="--i:4"><use href="#star"/></svg></div></div>
+    <div><h3>Nota máxima no Google.</h3><p>Média 5,0 em 27 avaliações. Quem conhece o AC Studio recomenda.</p></div>
+    <a class="btn c" href="https://www.google.com/maps/search/?api=1&query=AC+Studio+Pilates+e+RPG+Garanhuns" target="_blank" rel="noopener">Ver no Google <span class="ar">→</span></a>
+  </div>
+</div></section>
+
+<section class="pad" id="agendar" style="padding-top:0"><div class="wrap agd">
+  <div class="tx">
+    <span class="lbl rv">Comece agora</span>
+    <h2 class="rv d1">Seu primeiro passo é <span class="tc">uma avaliação.</span></h2>
+    <p class="rv d2">Escolha a modalidade e o melhor período. A mensagem chega pronta no WhatsApp do studio.</p>
+  </div>
+  <form class="form rv d1" id="agF">
+    <div class="f"><label for="aN">Seu nome</label><input id="aN" autocomplete="name" placeholder="Como podemos te chamar?"></div>
+    <div class="f"><span class="lb2">Modalidade</span><div class="opts" data-k="mod"><button type="button" class="on">Pilates</button><button type="button">Fisioterapia</button><button type="button">RPG</button><button type="button">Ainda não sei</button></div></div>
+    <div class="f"><span class="lb2">Objetivo</span><div class="opts" data-k="obj"><button type="button" class="on">Aliviar dores</button><button type="button">Postura</button><button type="button">Fortalecer</button><button type="button">Qualidade de vida</button></div></div>
+    <div class="f"><span class="lb2">Melhor período</span><div class="opts" data-k="per"><button type="button" class="on">Manhã</button><button type="button">Tarde</button></div></div>
+    <button class="btn t" type="submit"><svg><use href="#i-wa"/></svg>Enviar pelo WhatsApp <span class="ar">→</span></button>
+  </form>
+</div></section>
+
+<section class="pad" style="padding-top:0"><div class="wrap faq">
+  <div style="display:flex;flex-direction:column;gap:18px"><span class="lbl rv">Dúvidas</span><h2 class="rv d1">Perguntas <span class="tc">frequentes.</span></h2><p class="rv d2" style="color:var(--mid)">Ainda tem dúvida? A assistente virtual responde na hora.</p></div>
+  <div class="rv d1" id="faq">
+    <div class="qa on"><button aria-expanded="true">Nunca fiz Pilates. Posso começar?<span class="pl">+</span></button><div class="an"><div><p>Pode sim! As aulas são adaptadas ao seu nível e começam com uma avaliação. Pilates é para todas as idades e condicionamentos.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false">O que é RPG?<span class="pl">+</span></button><div class="an"><div><p>RPG é a Reeducação Postural Global, um método da fisioterapia que trabalha a postura do corpo como um todo, com alongamentos e posturas mantidas.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false">Pilates ajuda com dor nas costas?<span class="pl">+</span></button><div class="an"><div><p>O Pilates é muito procurado por quem sente dores na coluna, pois trabalha fortalecimento, alongamento e consciência corporal. A avaliação indica o melhor caminho para o seu caso.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false">Quais os valores e horários?<span class="pl">+</span></button><div class="an"><div><p>Planos, valores e horários disponíveis são informados pelo WhatsApp. Fale com a gente e escolha o que encaixa na sua rotina.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false">Onde fica o studio?<span class="pl">+</span></button><div class="an"><div><p>Av. Djalma Dutra, 628-A, Heliópolis, Garanhuns - PE. Veja o mapa logo abaixo.</p></div></div></div>
+  </div>
+</div></section>
+
+<section id="contato" style="padding-bottom:clamp(80px,10vw,130px)"><div class="wrap">
+  <div class="sh"><div class="l"><span class="lbl rv">Contato</span><h2 class="rv d1">Venha conhecer <span class="tc">o studio.</span></h2></div></div>
+  <div class="loc rv">
+    <div class="info">
+      <div class="li"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Endereço</small>Av. Djalma Dutra, 628-A · Heliópolis<br>Garanhuns - PE · 55296-290</div></div>
+      <div class="li"><span class="ic"><svg width="22" height="22"><use href="#i-wa"/></svg></span><div><small>WhatsApp</small><a class="wa" href="#" data-msg="Olá, AC Studio! Vim pelo site.">(87) 99194-8678</a></div></div>
+      <div class="li"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span><div><small>Telefone</small><a href="tel:+5587991820505">(87) 99182-0505</a></div></div>
+      <div class="li" style="border:0;padding:0"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><div><small>Instagram</small><a href="https://www.instagram.com/acstudio.pilates/" target="_blank" rel="noopener">@acstudio.pilates</a></div></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px"><a class="btn t" href="https://www.google.com/maps/dir/?api=1&destination=AC+Studio+Pilates+e+RPG,+Av.+Djalma+Dutra,+628,+Heli%C3%B3polis,+Garanhuns+-+PE" target="_blank" rel="noopener">Como chegar <span class="ar">→</span></a><a class="btn o" href="https://waze.com/ul?q=Av.%20Djalma%20Dutra%20628%20Garanhuns&navigate=yes" target="_blank" rel="noopener">Abrir no Waze</a></div>
+    </div>
+    <div class="map"><iframe title="Mapa do AC Studio no Google Maps" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.+Djalma+Dutra,+628,+Heli%C3%B3polis,+Garanhuns+-+PE,+55296-290&output=embed"></iframe></div>
+  </div>
+</div></section>
+
+<section class="final" id="final">
+  <img class="bgl" id="bgl" src="img/logo-w.png" alt="">
+  <div class="wrap">
+    <span class="lbl rv" style="color:var(--blush)">Sua aula está esperando</span>
+    <h2 class="rv d1">Seu corpo agradece cada movimento.</h2>
+    <p class="rv d2">Agende sua avaliação e descubra como o Pilates, a Fisioterapia e o RPG podem transformar o seu dia a dia.</p>
+    <a class="btn c wa rv d3" href="#" data-msg="Olá, AC Studio! Vim pelo site e quero agendar minha avaliação."><svg><use href="#i-wa"/></svg>Agendar pelo WhatsApp <span class="ar">→</span></a>
+  </div>
+</section>
+<footer><div class="wrap"><span>© <span id="yr">2026</span> AC Studio · Pilates, Fisioterapia e RPG · Garanhuns - PE</span><span><a href="https://www.instagram.com/acstudio.pilates/" target="_blank" rel="noopener">@acstudio.pilates</a> · <a class="wa" href="#" data-msg="Olá, AC Studio! Vim pelo site.">(87) 99194-8678</a></span></div></footer>
+
+<button class="abt" id="ab" aria-expanded="false" aria-controls="as"><span class="av"><img src="img/logo-w.png" alt=""></span><span><b>Assistente AC Studio</b><small>Tire suas dúvidas agora</small></span></button>
+<div class="as" id="as" hidden role="dialog" aria-label="Assistente virtual">
+  <header><span class="av"><img src="img/logo-w.png" alt=""></span><div><b>Assistente AC Studio</b><small>Online agora</small></div><button id="asX" aria-label="Fechar">×</button></header>
+  <div class="msgs" id="msgs" aria-live="polite"></div>
+  <div class="qk" id="qk"></div>
+  <form id="asF"><input id="asI" placeholder="Escreva sua dúvida…" autocomplete="off" aria-label="Sua pergunta" maxlength="200"><button aria-label="Enviar"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5 21 12 3 3.5v6.6l12 1.9-12 1.9Z"/></svg></button></form>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+const WA='5587991948678', wa=m=>'https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+const bindWA=r=>r.querySelectorAll('.wa').forEach(a=>{a.href=wa(a.dataset.msg||'Olá, AC Studio! Vim pelo site.');a.target='_blank';a.rel='noopener'});
+bindWA(document);document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(hover:hover)').matches;
+
+// título com máscara
+(function(){const h=document.getElementById('h1');let i=0;const sp=(n,cls)=>{const f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){f.appendChild(document.createTextNode(t));return}const w=document.createElement('span');w.className='w';const s=document.createElement('span');s.textContent=t;if(cls)s.className=cls;s.style.setProperty('--i',i++);w.appendChild(s);f.appendChild(w)});return f};[...h.childNodes].forEach(n=>n.replaceWith(sp(n,n.nodeType===1?n.className:'')))})();
+
+// abertura: anel completa, logo aparece, e a tela abre em círculo
+(function(){const L=document.getElementById('loader'),N=document.getElementById('ldN'),R=document.getElementById('ldR'),G=document.getElementById('ldL');const dur=reduce?200:2600,t0=performance.now();let fin=false;
+  function f(t){const p=Math.min(1,(t-t0)/dur),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;N.textContent=Math.round(e*100);R.style.strokeDashoffset=629*(1-e);G.style.opacity=.15+e*.85;if(p<1)requestAnimationFrame(f);else setTimeout(done,380)}
+  function done(){if(fin)return;fin=true;L.classList.add('go');document.body.classList.remove('loading');document.body.classList.add('ready');setTimeout(()=>L.remove(),1200)}
+  requestAnimationFrame(f);setTimeout(done,5600)})();
+
+// rolagem
+const nav=document.getElementById('nav'),wrapP=document.getElementById('principios'),track=document.getElementById('track'),pbar=document.getElementById('pbar'),bgl=document.getElementById('bgl'),ai1=document.getElementById('ai1'),ai2=document.getElementById('ai2');
+function onScroll(){const y=scrollY;nav.classList.toggle('solid',y>30);if(reduce)return;
+  const r=wrapP.getBoundingClientRect(),tot=r.height-innerHeight,p=Math.min(1,Math.max(0,-r.top/tot)),max=track.scrollWidth-innerWidth+40;track.style.transform='translateX('+(-p*Math.max(0,max))+'px)';pbar.style.width=(p*100)+'%';
+  const a=ai1.getBoundingClientRect();if(a.bottom>0&&a.top<innerHeight){const d=(a.top+a.height/2-innerHeight/2);ai1.style.setProperty('--py',(d*-.05)+'px');ai2.style.setProperty('--py',(d*.06)+'px')}
+  const fr=bgl.parentElement.getBoundingClientRect();if(fr.top<innerHeight&&fr.bottom>0)bgl.style.setProperty('--rr',((innerHeight-fr.top)*.04)+'deg')}
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(x=>io.observe(x));
+
+// vídeos tocam só quando aparecem
+(function(){const vs=[...document.querySelectorAll('video.iv'),document.getElementById('hvid')];const vo=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting&&!reduce){v.preload='auto';const pr=v.play();if(pr)pr.catch(()=>{})}else v.pause()}),{threshold:.25});vs.forEach(v=>vo.observe(v))})();
+
+// modalidades
+(function(){const M=[
+ {t:'Pilates',img:'img/cadillac.jpg',d:'Exercícios em aparelhos como o Cadillac e a Chair, que fortalecem o corpo de dentro para fora, melhoram a postura e a flexibilidade, sempre com acompanhamento próximo.',b:['Fortalecimento do core','Mais flexibilidade','Melhora da postura','Alívio de dores','Para todas as idades','Aulas acompanhadas']},
+ {t:'Fisioterapia',img:'img/andreia.jpg',d:'Avaliação e tratamento fisioterapêutico para dores, lesões e recuperação de movimentos, com um plano individual para a sua necessidade.',b:['Avaliação individual','Tratamento de dores','Reabilitação de lesões','Pós-operatório','Prevenção','Acompanhamento próximo']},
+ {t:'RPG',img:'img/studio.jpg',d:'A Reeducação Postural Global trabalha o corpo como um todo, com posturas e alongamentos orientados para corrigir desequilíbrios e aliviar tensões.',b:['Correção postural','Alívio de tensões','Coluna e pescoço','Alongamento global','Consciência corporal','Plano individualizado']}];
+  const tabs=[...document.querySelectorAll('#tabs button')],pill=document.getElementById('pill'),mod=document.getElementById('mod');
+  function pos(i){const b=tabs[i];pill.style.width=b.offsetWidth+'px';pill.style.transform='translateX('+b.offsetLeft+'px)'}
+  function set(i){tabs.forEach((b,k)=>{b.classList.toggle('on',k===i);b.setAttribute('aria-selected',k===i)});pos(i);const m=M[i];
+    mod.innerHTML='<div class="im"><img src="'+m.img+'" alt="'+m.t+' no AC Studio"></div><div class="bd"><span class="lbl">0'+(i+1)+' · Modalidade</span><h3>'+m.t+'</h3><p>'+m.d+'</p><ul>'+m.b.map(x=>'<li>'+x+'</li>').join('')+'</ul><a class="btn t wa" style="align-self:flex-start" href="#" data-msg="Olá, AC Studio! Tenho interesse em '+m.t+'. Como funciona?">Quero fazer '+m.t+' <span class="ar">→</span></a></div>';bindWA(mod)}
+  tabs.forEach((b,i)=>b.onclick=()=>set(i));set(0);addEventListener('resize',()=>pos(tabs.findIndex(b=>b.classList.contains('on'))));document.fonts&&document.fonts.ready.then(()=>pos(tabs.findIndex(b=>b.classList.contains('on'))))})();
+
+// galeria com zoom
+(function(){document.querySelectorAll('.gi').forEach(g=>g.onclick=()=>{const d=document.createElement('div');d.className='lb';d.setAttribute('role','dialog');d.innerHTML='<img src="'+g.dataset.src+'" alt="'+g.querySelector('img').alt+'"><button aria-label="Fechar">×</button>';const close=()=>{d.remove();removeEventListener('keydown',k)};const k=e=>{if(e.key==='Escape')close()};d.onclick=e=>{if(e.target!==d.querySelector('img'))close()};addEventListener('keydown',k);document.body.appendChild(d);d.querySelector('button').focus()})})();
+
+// agendar
+(function(){document.querySelectorAll('.opts').forEach(o=>{const bs=[...o.children];bs.forEach(b=>b.onclick=()=>bs.forEach(x=>x.classList.toggle('on',x===b)))});
+  document.getElementById('agF').onsubmit=e=>{e.preventDefault();const g=k=>document.querySelector('.opts[data-k="'+k+'"] .on').textContent,n=document.getElementById('aN').value.trim();open(wa('Olá, AC Studio!'+(n?' Sou '+n+'.':'')+' Gostaria de agendar uma avaliação.\n• Modalidade: '+g('mod')+'\n• Objetivo: '+g('obj')+'\n• Melhor período: '+g('per')),'_blank','noopener')}})();
+
+// FAQ
+(function(){const it=[...document.querySelectorAll('.qa')];it.forEach(q=>q.querySelector('button').onclick=()=>{const o=!q.classList.contains('on');it.forEach(x=>{x.classList.remove('on');x.querySelector('button').setAttribute('aria-expanded','false')});if(o){q.classList.add('on');q.querySelector('button').setAttribute('aria-expanded','true')}})})();
+
+// magnético
+if(fine&&!reduce)document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.setProperty('--x',(e.clientX-r.left-r.width/2)*.12+'px');b.style.setProperty('--y',(e.clientY-r.top-r.height/2)*.22+'px')});b.addEventListener('pointerleave',()=>{b.style.setProperty('--x','0px');b.style.setProperty('--y','0px')})});
+
+// assistente virtual
+(function(){const norm=t=>t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9 ]/g,' ');
+  const lev=(a,b)=>{const m=[];for(let i=0;i<=a.length;i++){m[i]=[i];for(let j=1;j<=b.length;j++)m[i][j]=i?Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[i-1]===b[j-1]?0:1)):j}return m[a.length][b.length]};
+  const KB=[
+   {q:'Como agendar?',k:['agendar','agenda','marcar','avaliacao','matricula','matricular','comecar','inscrever'],a:'É só chamar no <b>WhatsApp (87) 99194-8678</b> ou usar o <a href="#agendar">formulário de agendamento</a> aqui no site. A primeira etapa é uma avaliação.',w:'Olá, AC Studio! Gostaria de agendar uma avaliação.'},
+   {q:'Valores e planos',k:['valor','preco','quanto','custa','plano','mensalidade','pacote','pagamento','pix','cartao'],a:'Os <b>planos e valores</b> são informados pelo WhatsApp, de acordo com a modalidade e a frequência semanal.',w:'Olá, AC Studio! Gostaria de saber os valores e planos.'},
+   {q:'Horários',k:['horario','hora','abre','fecha','funciona','sabado','domingo','manha','tarde','noite'],a:'Os horários das aulas são combinados pelo WhatsApp. Pelo Google, o studio fecha às <b>17h</b>. Confirme a disponibilidade com a equipe.',w:'Olá, AC Studio! Quais horários vocês têm disponíveis?'},
+   {q:'O que é RPG?',k:['rpg','reeducacao','postura','postural','torto','escoliose','corcunda'],a:'O <b>RPG</b> (Reeducação Postural Global) trabalha o corpo como um todo, com posturas e alongamentos orientados para corrigir desequilíbrios e aliviar tensões.',w:'Olá, AC Studio! Tenho interesse em RPG.'},
+   {q:'Nunca fiz Pilates',k:['nunca fiz','iniciante','comecando','primeira vez','sedentario','sedentaria','idade','idoso','idosa','gordinha','acima do peso'],a:'Sem problema! O Pilates é para <b>todas as idades e corpos</b>. As aulas são adaptadas ao seu nível e começam com uma avaliação.',w:'Olá, AC Studio! Nunca fiz Pilates e gostaria de começar.'},
+   {q:'Dor nas costas',k:['dor','costas','coluna','lombar','hernia','pescoco','ombro','joelho','quadril','lesao','bico de papagaio'],a:'O Pilates, a Fisioterapia e o RPG são muito procurados por quem sente dores. A avaliação com a fisioterapeuta indica o melhor caminho para o seu caso.',w:'Olá, AC Studio! Sinto dores e gostaria de uma avaliação.'},
+   {q:'Onde fica?',k:['onde','endereco','fica','local','localiza','rua','bairro','heliopolis','chegar'],a:'📍 <b>Av. Djalma Dutra, 628-A, Heliópolis</b>, Garanhuns - PE. <a href="#contato">Ver no mapa →</a>'},
+   {q:'Fisioterapia',k:['fisio','fisioterapia','fisioterapeuta','reabilita','cirurgia','pos operatorio','tratamento'],a:'O AC Studio oferece <b>Fisioterapia</b> com avaliação individual para dores, lesões e recuperação de movimentos.',w:'Olá, AC Studio! Gostaria de saber sobre a fisioterapia.'},
+   {q:'Gestantes',k:['gestante','gravida','gravidez','pos parto','bebe'],a:'Para gestantes e pós-parto, o ideal é conversar antes com a equipe e ter a liberação médica. Fale com a gente pelo WhatsApp.',w:'Olá, AC Studio! Estou gestante / no pós-parto e gostaria de saber sobre as aulas.'},
+   {q:'Contato',k:['contato','telefone','whatsapp','zap','numero','instagram','insta'],a:'WhatsApp <b>(87) 99194-8678</b> · Telefone <b>(87) 99182-0505</b> · Instagram <b>@acstudio.pilates</b>.',w:'Olá, AC Studio! Vim pelo site.'}];
+  const SM=[{k:['oi','ola','bom dia','boa tarde','boa noite','opa','eae'],a:'Olá! 😊 Posso te ajudar com modalidades, valores, horários, endereço e agendamento.'},{k:['obrigad','valeu','brigad'],a:'Por nada! Te esperamos no studio. 🧡'}];
+  const msgs=document.getElementById('msgs'),qk=document.getElementById('qk'),as=document.getElementById('as'),ab=document.getElementById('ab');
+  const add=(h,c)=>{const d=document.createElement('div');d.className='m '+c;d.innerHTML=h;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;d.querySelectorAll('a[href^="#"]').forEach(a=>a.onclick=()=>{if(innerWidth<700)toggle(false)})};
+  function score(e,n){const ws=n.split(/\s+/).filter(w=>w.length>=4);let s=0;e.k.forEach(k=>{if(n.includes(k))s+=2;else if(k.length>=4&&!k.includes(' ')&&ws.some(w=>lev(w,k)<=1||(k.length>=6&&lev(w.slice(0,k.length),k)<=1)))s+=1});return s}
+  function reply(t){const n=' '+norm(t)+' ';const ex=KB.find(e=>e.q===t);if(ex)return ex;if(n.trim().length<16){const g=SM.find(e=>e.k.some(k=>n.includes(' '+k)));if(g)return g}let best=null,sc=0;KB.forEach(e=>{const s=score(e,n);if(s>sc){sc=s;best=e}});if(best)return best;return SM.find(e=>e.k.some(k=>n.includes(' '+k)))||null}
+  function ask(t){add(t.replace(/</g,'&lt;'),'u');const ty=document.createElement('div');ty.className='m b typing';ty.style.opacity=1;ty.innerHTML='<i></i><i></i><i></i>';msgs.appendChild(ty);msgs.scrollTop=msgs.scrollHeight;
+    setTimeout(()=>{ty.remove();const r=reply(t);if(r)add(r.a+(r.w?'<br><a href="'+wa(r.w)+'" target="_blank" rel="noopener">Continuar no WhatsApp →</a>':''),'b');
+      else add('Essa a nossa equipe responde melhor! <a href="'+wa('Olá, AC Studio! Vim pelo site e tenho uma dúvida: '+t)+'" target="_blank" rel="noopener">Enviar no WhatsApp →</a>','b')},700)}
+  KB.slice(0,8).forEach(e=>{const b=document.createElement('button');b.type='button';b.textContent=e.q;b.onclick=()=>ask(e.q);qk.appendChild(b)});
+  let hi=false;function toggle(o){as.hidden=!o;ab.setAttribute('aria-expanded',o);if(o&&!hi){hi=true;add('Olá! Sou a assistente virtual do <b>AC Studio · Pilates, Fisioterapia e RPG</b>. Como posso te ajudar?','b')}if(o&&fine)document.getElementById('asI').focus()}
+  ab.onclick=()=>toggle(as.hidden);document.getElementById('asX').onclick=()=>toggle(false);addEventListener('keydown',e=>{if(e.key==='Escape')toggle(false)});
+  document.getElementById('asF').onsubmit=e=>{e.preventDefault();const i=document.getElementById('asI');if(i.value.trim()){ask(i.value.trim());i.value=''}}})();
+</script>
+</body>
+</html>
